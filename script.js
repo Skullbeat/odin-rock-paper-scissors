@@ -57,3 +57,36 @@ let playRound = (playerChoice, ComputerChoice) => {
     }
 
 }
+
+let game = () => {
+    let player = playerChoice();
+    let computer = getComputerChoice();
+    playRound(player, computer);
+
+    player = playerChoice();
+    computer = getComputerChoice();
+    playRound(player, computer);
+
+    player = playerChoice();
+    computer = getComputerChoice();
+    playRound(player, computer);
+
+    player = playerChoice();
+    computer = getComputerChoice();
+    playRound(player, computer);
+
+    player = playerChoice();
+    computer = getComputerChoice();
+    playRound(player, computer);
+
+    if (computerScore > playerScore) {
+        console.log('YOU LOOSE, Computer Wins!');
+    } else if (computerScore < playerScore) {
+        console.log('CONGRATS YOU Win!');
+    } else {
+        console.log('It is a TIE!');
+    }
+
+}
+
+game();
