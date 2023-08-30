@@ -1,10 +1,10 @@
 let computerScore = 0;
 let playerScore = 0;
 
-let playerChoice = () => {
-    let choice = prompt('Choose: Rock, Paper or Scissor.').toLowerCase();
+let getPlayerChoice = (choice) => {
+    let playerChoice = choice.toLowerCase();
 
-    return choice;
+    return playerChoice;
 }
 
 let getComputerChoice = () => {
@@ -21,7 +21,7 @@ let playRound = (playerChoice, ComputerChoice) => {
             } else if (playerChoice == 'paper') {
                 playerScore++;
                 console.log('You Win this round');
-            } else if (playerChoice == 'scissor') {
+            } else if (playerChoice == 'scissors') {
                 computerScore++;
                 console.log('computer Win this round');
             } else {
@@ -34,7 +34,7 @@ let playRound = (playerChoice, ComputerChoice) => {
                 console.log('computer Win this round');
             } else if (playerChoice == 'paper') {
                 console.log('Tie');
-            } else if (playerChoice == 'scissor') {
+            } else if (playerChoice == 'scissors') {
                 playerScore++;
                 console.log('You Win this round');
             } else {
@@ -48,7 +48,7 @@ let playRound = (playerChoice, ComputerChoice) => {
             } else if (playerChoice == 'paper') {
                 computerScore++;
                 console.log('computer Win this round');
-            } else if (playerChoice == 'scissor') {
+            } else if (playerChoice == 'scissors') {
                 console.log('Tie');
             } else {
                 console.log('You have entered a wrong value, invalid round.');
@@ -58,7 +58,7 @@ let playRound = (playerChoice, ComputerChoice) => {
 
 }
 
-let game = () => {
+/*let game = () => {
     let player = playerChoice();
     let computer = getComputerChoice();
     playRound(player, computer);
@@ -86,7 +86,10 @@ let game = () => {
     } else {
         console.log('It is a TIE!');
     }
-
 }
 
-game();
+game();*/
+
+document.getElementById("rock").addEventListener("click", function(e){playRound(getPlayerChoice(e.target.id), getComputerChoice())});
+document.getElementById("paper").addEventListener("click", function(e){playRound(getPlayerChoice(e.target.id), getComputerChoice())});
+document.getElementById("scissors").addEventListener("click", function(e){playRound(getPlayerChoice(e.target.id), getComputerChoice())});
