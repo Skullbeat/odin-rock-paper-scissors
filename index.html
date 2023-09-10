@@ -4,16 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="result-game"></div>
-    <div id="result-round"></div>
-    <div>Player Points: <p id="player-score"></p></div>
-    <div>Computer Points: <p id="computer-score"></p></div>
-    <button id="rock" class="btn">Rock</button>
-    <button id="paper" class="btn">Paper</button>
-    <button id="scissors" class="btn">Scissor</button>
-
+    <h1 class="title">Rock Paper Scissors Game</h1>
+    <div class="container">
+        <h2 class="title">Welcome to the Rock, Paper, Scissors game.</h2>
+        <div class="scores-container">
+            <div class="score-box"><div>Player Points: <p id="player-score"></p></div></div>
+            <div class="score-box"><div>Computer Points: <p id="computer-score"></p></div></div>
+        </div>
+        <div class="buttons">
+            <a href="#"><img src="images/rock-button.webp" id="rock" alt="rock icon button"></a>
+            <a href="#"><img src="images/paper-button.webp" id="paper" alt="paper icon button"></a>
+            <a href="#"><img src="images/scissors-button.webp" id="scissors" alt="scissors icon button"></a>
+        </div>
+        <div id="computer-selection"></div>
+        <p class="result-label">Round result</p>
+        <div id="result-round"></div>
+        <p class="result-label">Game result</p>
+        <div id="result-game"></div>
+        
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

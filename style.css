@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Kranky&family=Montserrat:wght@400;700&display=swap');
+
+body {
+    background-color: #27B3E5;
+    background-image: url('./images/bg-rps.png');
+    background-position: 15% 130%;
+    background-repeat: repeat-x;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+    text-align: center;
+    font-size: 21px;
+}
+
+h1.title {
+    font-family: 'Kranky', cursive;
+    color: #FFFFFF;
+    font-size: 45px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 20px;
+    height: 60vh;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.scores-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.score-box {
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buttons a.disabled {
+    pointer-events: none;
+    cursor: none;
+}
+
+.buttons a.disabled img {
+    filter: grayscale();
+}
+#computer-selection {
+    padding: 1rem;
+    max-width: 400px;
+    min-height: 25px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.result-label {
+    max-width: 400px;
+    margin: 0 auto 1rem;
+}
+
+#result-round, #result-game {
+    padding: 1rem;
+    max-width: 400px;
+    min-height: 25px;
+    margin: 0 auto 2rem;
+    border: 2px solid #000000;
+    text-align: center;
+}
